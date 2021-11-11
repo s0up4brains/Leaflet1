@@ -2,25 +2,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Strode College Map</title>
+    <title>Strode College Map</title>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-	    crossorigin=""></script>
+	      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+	      crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin=""></script>
 </head>
 <body>
 	<p>this is a map</p>
 	<p>u smell</p>
-	 <div id="map" style="width: 100%; height: 800px;"></div>
-  <script>
+	<div id="map" style="width: 100%; height: 800px;"></div>
+<!-- Map -->
+	<script>
 	var mymap = L.map('map').setView([51.12983, -2.73341], 15);
       
 	  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 	  }).addTo(mymap);
-	<!-- Markers -->
+<!-- Map Markers -->
 	  var marker = L.marker([51.12983, -2.73341]).addTo(mymap);
 	    marker.bindPopup("<b>C Block</b><br>T-Level Digital");
 	    //marker.bindPopup("<b>C Block</b><br>T-Level Digital").openPopup();
@@ -30,7 +31,6 @@
 	  var marker = L.marker([51.120280,-2.726327]).addTo(mymap);
 	    marker.bindPopup("<b>Milfield</b><br>Tory Spawn Point");
 	    //marker.bindPopup("<b>Home</b><br>135 Main Street").openPopup();
-	   
-    </script>
+	</script>
 </body>
 </html>
