@@ -20,8 +20,10 @@
 	      crossorigin=""/>
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
 		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-		crossorigin=""></script>
-	<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+		crossorigin="">
+	</script>
+	<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'>
+	</script>
 	<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 </head>
 <body>
@@ -29,7 +31,7 @@
 	<p class = "text">this is a map</p>
 	<p>u smell</p>
 <!-- Map -->
-	<div id="map" style="border: 4px solid black; width: 100%; height: 800px;"></div>
+	<div id="map" style="border: 4px solid black; width: 50%; height: 400px;"></div>
 	
 	<script>
 		var mymap = L.map('map').setView([51.12983, -2.73341], 15);
@@ -59,6 +61,8 @@
     			fillOpacity: 0.5,
     			radius: 500
 		}).addTo(mymap);
+		
+		 mymap.addControl(new L.Control.Fullscreen());
 	</script>
 </body>
 </html>
