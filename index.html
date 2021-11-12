@@ -50,6 +50,13 @@
 	  var marker4 = L.marker([51.120280,-2.726327]).addTo(mymap);
 	    marker4.bindPopup("<img style='width: 200px' src='tory.jpg'><p><b>Milfield</b></p><p>Tory Spawn Point</p>");
 	    //marker.bindPopup("<b>Milfield</b><br>Tory Spawn Point").openPopup();
+<!--Circles-->
+		var circle = L.circle([51.120280,-2.726327], {
+			color: 'red',
+    			fillColor: '#f03',
+    			fillOpacity: 0.5,
+    			radius: 500
+		}).addTo(mymap);
 	</script>
 </body>
 </html>
