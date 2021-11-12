@@ -55,15 +55,6 @@
             	maxNativeZoom: 18,
 	    	maxZoom: 22
         	});
-	
-		var surface = L.tileLayer('https://geoffrowland.github.io/Surface-Street/{z}/{x}/{y}.png', {
-	    	tms: true, 
-	    	opacity: 1.0,
-	    	maxNativeZoom: 18,	
-	    	maxZoom: 20,
-	    	minZoom: 12,
-	    	attribution: 'LiDAR 1m DSM Environment Agency OGL &copy; Crown Copyright 2021'
-        	});	    
 	    
 <!-- Map Markers -->
 	  var marker1 = L.marker([51.12983, -2.73341]).addTo(mymap);
@@ -90,7 +81,18 @@
 	    marker6.bindPopup("<b>M Block</b><br>add title");
 	    //marker6.bindPopup("<b>M Block</b><br>add title").openPopup();
 		
-
+<!--Layers-->
+          var college = L.layerGroup([marker1, marker2,marker5,marker6]).addTo(mymap);
+		
+	  var baseMaps = {
+           "OSM": osm,
+           "Google": google
+          };
+	  var overlayMaps = {
+	    "Surface": surface,
+            "College": college
+          };
+	  L.control.layers(baseMaps, overlayMaps).addTo(mymap);
 <!--Unique Map Icons-->
 	  var strodeIcon = L.icon({
 		  iconUrl: 'strodelogo.png',
